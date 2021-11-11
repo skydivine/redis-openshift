@@ -186,7 +186,7 @@ items:
         from:
           kind: ImageStreamTag
           name: redis:latest
-          namespace: redis
+          namespace: cloud-auth-service
       type: ImageChange
     - type: ConfigChange
   status: {}
