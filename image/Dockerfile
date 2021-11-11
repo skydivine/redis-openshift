@@ -2,7 +2,7 @@ FROM centos
 
 RUN yum update -y && yum upgrade -y
 
-RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
  
 RUN yum install redis hostname -y ; yum clean all
 
