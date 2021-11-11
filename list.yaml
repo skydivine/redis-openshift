@@ -72,7 +72,7 @@ items:
           imagePullPolicy: Always
           name: redis
           ports:
-          - containerPort: 6379
+          - containerPort: 6381
             protocol: TCP
           resources: {}
           terminationMessagePath: /dev/termination-log
@@ -143,7 +143,7 @@ items:
           imagePullPolicy: Always
           name: redis
           ports:
-          - containerPort: 6379
+          - containerPort: 6381
             protocol: TCP
           resources: {}
           terminationMessagePath: /dev/termination-log
@@ -157,7 +157,7 @@ items:
           imagePullPolicy: Always
           name: sentinel
           ports:
-          - containerPort: 26379
+          - containerPort: 26381
             protocol: TCP
           resources: {}
           terminationMessagePath: /dev/termination-log
@@ -228,7 +228,7 @@ items:
           imagePullPolicy: Always
           name: sentinel
           ports:
-          - containerPort: 26379
+          - containerPort: 26381
             protocol: TCP
           resources: {}
           terminationMessagePath: /dev/termination-log
@@ -265,9 +265,9 @@ items:
     name: redis-master
   spec:
     ports:
-    - port: 6379
+    - port: 6381
       protocol: TCP
-      targetPort: 6379
+      targetPort: 6381
     selector:
       redis-master: "true"
     sessionAffinity: None
@@ -284,9 +284,9 @@ items:
     name: redis-sentinel
   spec:
     ports:
-    - port: 26379
+    - port: 26381
       protocol: TCP
-      targetPort: 26379
+      targetPort: 26381
     selector:
       redis-sentinel: "true"
     sessionAffinity: None
