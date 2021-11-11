@@ -32,7 +32,7 @@ items:
     triggers: []
   status:
     lastVersion: 0
-- apiVersion: v1
+- apiVersion: v1oc start-build redis-build
   kind: ImageStream
   metadata:
     labels:
@@ -96,7 +96,7 @@ items:
         from:
           kind: ImageStreamTag
           name: redis:latest
-          namespace: redis
+          namespace: cloud-auth-service
       type: ImageChange
   status: {}
 - apiVersion: v1
@@ -177,7 +177,7 @@ items:
         from:
           kind: ImageStreamTag
           name: redis:latest
-          namespace: redis
+          namespace: cloud-auth-service
       type: ImageChange
     - imageChangeParams:
         automatic: true
@@ -252,7 +252,7 @@ items:
         from:
           kind: ImageStreamTag
           name: redis:latest
-          namespace: redis
+          namespace: cloud-auth-service
       type: ImageChange
   status: {}
 - apiVersion: v1
