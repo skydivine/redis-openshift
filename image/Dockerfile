@@ -1,7 +1,9 @@
 FROM centos
 
-RUN yum install epel-release -y
+RUN yum update && yum upgrade
 
+RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+ 
 RUN yum install redis hostname -y ; yum clean all
 
 COPY redis-master.conf /redis-master/redis.conf
