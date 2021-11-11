@@ -44,14 +44,14 @@ items:
             - mountPath: /redis-master-data
               name: data 
           ports:
-            - containerPort: 6379
+            - containerPort: 6381
           resources: {}
         - image: 172.30.151.14:5000/redis/redis@sha256:e508f686a4f50eb54350c091f3df8fc6a9649dd8c613482088534c5ca70cfc37
           imagePullPolicy: Always
           name: sentinel
           resources: {}
           ports:
-            - containerPort: 26379
+            - containerPort: 26381
           env:
             - name: SENTINEL
               value: "true"   

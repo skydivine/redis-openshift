@@ -23,7 +23,7 @@ items:
             - mountPath: /redis-master-data
               name: data 
           ports:
-            - containerPort: 6379
+            - containerPort: 6381
           resources: {}
         dnsPolicy: ClusterFirst
         restartPolicy: Always

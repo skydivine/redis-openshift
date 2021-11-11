@@ -43,7 +43,7 @@ function launchsentinel() {
 
   sentinel_conf=/redis-sentinel/sentinel.conf
 
-  echo "sentinel monitor mymaster ${master} 6379 2" > ${sentinel_conf}
+  echo "sentinel monitor mymaster ${master} 6381 2" > ${sentinel_conf}
   echo "sentinel down-after-milliseconds mymaster 60000" >> ${sentinel_conf}
   echo "sentinel failover-timeout mymaster 180000" >> ${sentinel_conf}
   echo "sentinel parallel-syncs mymaster 1" >> ${sentinel_conf}
@@ -74,7 +74,7 @@ function launchslave() {
     sleep 10
   done
   sed -i "s/%master-ip%/${master}/" /redis-slave/redis.conf
-  sed -i "s/%master-port%/6379/" /redis-slave/redis.conf
+  sed -i "s/%master-port%/6381/" /redis-slave/redis.conf
   redis-server /redis-slave/redis.conf --protected-mode no
 
 }
